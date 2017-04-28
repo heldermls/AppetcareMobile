@@ -13,6 +13,6 @@ git clone https://github.com/fabricamardev/AppetcareMobile.git
  inforne usuário e senha quando solicitado
  
 #### Rodando o aplicativo
-depois de clonado, acesse a pasta ``` cd AppetcareMobile ```
-e execute o comando ````npm install ``` para baixar as dependências do projeto.
-Depois que acabar a atualização, basta digitar ``` ionic serve ```
+depois de clonado, acesse a pasta ```cd AppetcareMobile```
+e execute o comando ```npm install``` para baixar as dependências do projeto.
+Depois que acabar a atualização, basta digitar ```ionic serve```
