@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { CadastroTutorPage } from '../pages/cadastro-tutor/cadastro-tutor';
+import { PicturePage } from  '../pages/picture/picture';
 
 @Component({
   templateUrl: 'app.html'
@@ -18,8 +19,10 @@ export class MyApp {
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public menu: MenuController) {
 
     this.pages = [
+       {title: 'Foto do PET', component: PicturePage},
         {title: 'homePage', component: HomePage},
         {title: 'cadastroTutorPage', component: CadastroTutorPage}
+       
     ];
 
     platform.ready().then(() => {
