@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { CadastroTutorPage } from '../pages/cadastro-tutor/cadastro-tutor';
 import { CadastroPetPage } from "../pages/cadastro-pet/cadastro-pet";
+import { PicturePage } from  '../pages/picture/picture';
 
 @Component({
   templateUrl: 'app.html'
@@ -30,7 +31,9 @@ export class MyApp {
         {title: 'Localizar ONGs', component: HomePage},
         {title: 'Vacinas', component: HomePage},
         {title: 'Vermifugo', component: HomePage},
-        {title: 'Medicamentos', component: HomePage}
+        {title: 'Medicamentos', component: HomePage},
+        {title: 'Foto do PET', component: PicturePage},
+        {title: 'cadastroTutorPage', component: CadastroTutorPage}
     ];
 
     platform.ready().then(() => {
