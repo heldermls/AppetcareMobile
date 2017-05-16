@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 /**
  * Generated class for the CadastroTutor page.
@@ -14,11 +15,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CadastroTutorPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  cadastroTutorForm: FormGroup;
+
+  constructor(
+    public formBuilder: FormBuilder,
+    public navCtrl: NavController, 
+    public navParams: NavParams) {
+      
+      this.cadastroTutorForm = this.formBuilder.group({
+        nome:['', [Validators.required, Validators.minLength(3)]],
+        email: ['', [Validators.required, Validators.minLength(3)]],
+        telefone: ['', [Validators.required, Validators.minLength(3)]],
+        senha: ['', [Validators.required, Validators.minLength(3)]],
+        confirmarsenha: ['', [Validators.required, Validators.minLength(3)]]
+      });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CadastroTutorPage');
+
+  cadastrar() : void{ 
+    console.log(this.cadastroTutorForm.value);
   }
 
 }

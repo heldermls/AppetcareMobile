@@ -8,9 +8,12 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CadastroTutorPage} from '../pages/cadastro-tutor/cadastro-tutor';
+import { CadastroPetPage } from "../pages/cadastro-pet/cadastro-pet";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ProviderServiceProvider } from '../providers/provider-service/provider-service';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    CadastroTutorPage
+    CadastroTutorPage,
+    CadastroPetPage
   ],
   imports: [
     BrowserModule,
@@ -32,12 +36,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    CadastroTutorPage
+    CadastroTutorPage,
+    CadastroPetPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler}, ProviderServiceProvider
   ]
 })
 export class AppModule {}
