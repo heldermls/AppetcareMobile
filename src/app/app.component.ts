@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { CadastroTutorPage } from '../pages/cadastro-tutor/cadastro-tutor';
+import { CadastroPetPage } from "../pages/cadastro-pet/cadastro-pet";
 import { PicturePage } from  '../pages/picture/picture';
 
 @Component({
@@ -19,10 +20,20 @@ export class MyApp {
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public menu: MenuController) {
 
     this.pages = [
-       {title: 'Foto do PET', component: PicturePage},
-        {title: 'homePage', component: HomePage},
+        {title: 'Appetcare', component: HomePage},
+        {title: 'Perfil', component: HomePage},
+        {title: 'Serviços', component: HomePage},
+        {title: 'Cadastro de Tutor', component: CadastroTutorPage},
+        {title: 'Cadastro de Pet', component: CadastroPetPage},
+        {title: 'Consultas', component: HomePage},
+        {title: 'Localizar Petshop', component: HomePage},
+        {title: 'Sobre', component: HomePage},
+        {title: 'Localizar ONGs', component: HomePage},
+        {title: 'Vacinas', component: HomePage},
+        {title: 'Vermifugo', component: HomePage},
+        {title: 'Medicamentos', component: HomePage},
+        {title: 'Foto do PET', component: PicturePage},
         {title: 'cadastroTutorPage', component: CadastroTutorPage}
-       
     ];
 
     platform.ready().then(() => {

@@ -8,10 +8,13 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CadastroTutorPage} from '../pages/cadastro-tutor/cadastro-tutor';
+import { CadastroPetPage } from "../pages/cadastro-pet/cadastro-pet";
 import { PicturePage } from '../pages/picture/picture';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ProviderServiceProvider } from '../providers/provider-service/provider-service';
+
 
 import { File } from '@ionic-native/file';
 import { Transfer } from '@ionic-native/transfer';
@@ -26,6 +29,7 @@ import { Camera } from '@ionic-native/camera';
     HomePage,
     TabsPage,
     CadastroTutorPage,
+    CadastroPetPage,
     PicturePage
   ],
   imports: [
@@ -40,6 +44,7 @@ import { Camera } from '@ionic-native/camera';
     HomePage,
     TabsPage,
     CadastroTutorPage,
+    CadastroPetPage,
     PicturePage
   ],
   providers: [
@@ -49,7 +54,7 @@ import { Camera } from '@ionic-native/camera';
     Transfer,
     Camera,
     FilePath,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler}, ProviderServiceProvider
   ]
 })
 export class AppModule {}

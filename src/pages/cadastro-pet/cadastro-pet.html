@@ -1,0 +1,58 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Cadastro de Pet</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="cadastroPetForm" (ngSubmit)="cadastrar(); $event.preventDefault()">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Nome</ion-label>
+        <ion-input type="text" formControlName="nome"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Data de nascimento</ion-label>
+        <ion-input type="date" formControlName="dtnascimento"></ion-input>
+      </ion-item>
+
+      <ion-list radio-group formControlName="sexo">
+        <ion-list-header>
+          Sexo
+        </ion-list-header>
+        <ion-item>
+          <ion-label>Masculino</ion-label>
+          <ion-radio value="masculino"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Feminino</ion-label>
+          <ion-radio value="feminino"></ion-radio>
+        </ion-item>
+      </ion-list>
+
+
+      <ion-item>
+        <ion-label floating>Espécie</ion-label>
+        <ion-input type="text" formControlName="especie"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Raça</ion-label>
+        <ion-input type="text" formControlName="raca"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <div padding>
+      <button ion-button block type="submit" [disabled]="cadastroPetForm.invalid">Cadastrar</button>
+    </div>
+  </form>
+
+</ion-content>
