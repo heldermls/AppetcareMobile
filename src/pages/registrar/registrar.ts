@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginProvider } from "../../providers/login-provider";
-import { Credencial } from "../../model/credencial";
+import { Credencial } from "../../classes/credencial";
 
 /**
  * Generated class for the Registrar page.

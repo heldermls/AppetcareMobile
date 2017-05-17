@@ -2,7 +2,7 @@ import { Injectable, EventEmitter, NgZone } from '@angular/core';
 import { Http } from '@angular/http';
 import {Usuario} from "../model/usuario";
 import 'rxjs/add/operator/map';
-import { Credencial } from "../model/credencial";
+import { Credencial } from "../classes/credencial";
 import firebase from "firebase";
 
 
