@@ -7,7 +7,7 @@ import { File } from '@ionic-native/file';
 import { Transfer, TransferObject } from '@ionic-native/transfer';
 import { FilePath } from '@ionic-native/file-path';
 import { Camera } from '@ionic-native/camera';
-/**
+/**v
  * Generated class for the PicturePage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
@@ -111,7 +111,7 @@ public pathForImage(img) {
 }
 public uploadImage() {
   // Destination URL
-  var url = "http://localhost:8080/upload.php";
+  var url = "http://192.168.0.25:8080/upload.php";
  
   // File for Upload
   var targetPath = this.pathForImage(this.lastImage);
