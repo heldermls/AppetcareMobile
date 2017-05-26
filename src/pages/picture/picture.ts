@@ -1,8 +1,5 @@
-
-import { IonicPage } from 'ionic-angular';
+import { IonicPage, NavController, ActionSheetController, ToastController, Platform, LoadingController, Loading } from 'ionic-angular';
 import { Component } from '@angular/core';
-import { NavController, ActionSheetController, ToastController, Platform, LoadingController, Loading } from 'ionic-angular';
- 
 import { File } from '@ionic-native/file';
 import { Transfer, TransferObject } from '@ionic-native/transfer';
 import { FilePath } from '@ionic-native/file-path';
